@@ -1,6 +1,6 @@
 FROM alpine:3.3
 
-RUN apk --update add openssl && \
+RUN apk --update add openssl unrar && \
     wget -qO /tmp/nzbget.run \
         $(wget -qO- http://nzbget.net/info/nzbget-version-linux.json | \
         sed -n "s/^.*stable-download.*: \"\(.*\)\".*/\1/p") && \
